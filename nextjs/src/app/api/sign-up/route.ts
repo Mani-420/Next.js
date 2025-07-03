@@ -1,9 +1,7 @@
 import dbConnect from '@/lib/dbConnect';
 import UserModel from '@/model/User.model';
 import bcrypt from 'bcryptjs';
-
 import { sendVerificationEmail } from '@/helpers/sendVerificationEmail';
-import { success } from 'zod/v4';
 
 export async function POST(request: Request) {
   await dbConnect();
